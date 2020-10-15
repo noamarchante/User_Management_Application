@@ -1,0 +1,83 @@
+.blue-button {
+    background: #25A6E1;
+    padding: 3px 5px;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #1A87B9
+}
+
+.red-button {
+    background: #CD5C5C;
+    padding: 3px 5px;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #CD5C5C
+}
+
+.green-button{
+    background: green;
+    padding: 3px 5px;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #1A87B9
+}
+
+table {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    width: 50%;
+}
+
+caption {
+    text-align: left;
+    color: orange;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+th {
+    background: orange;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: WhiteSmoke;
+}
+
+tbody tr td:nth-child(2) {
+    text-align: center;
+}
+
+tbody tr td:nth-child(3), tbody tr td:nth-child(4) {
+    text-align: center;
+    font-family: monospace;
+}
+
+tfoot {
+    background: orange;
+    color: orange;
+    text-align: right;
+}
+
+tfoot tr th:last-child {
+    font-family: monospace;
+}
+
+td, th {
+    border: 1px solid orange;
+    width: 25%;
+    text-align: left;
+    padding: 5px 10px;
+}

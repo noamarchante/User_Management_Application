@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="UserManagement">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="/src/main/resources/static/js/UserController.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
+
+        <title>User Administration</title>
+    </head>
+    <body ng-controller="UserController">
+        <h1>User Management</h1>
+        <form ng-submit="submitUser()">
+            <table>
+                <tr>
+                    <th colspan="2">Add/Edit user</th>
+                </tr>
+                <tr ng-hide="userForm.userId==-1">
+                    <td>User Id</td>
+                    <td><input type="text" ng-model="userForm.userId" /></td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td><input type="text" ng-model="userForm.userName" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" ng-model="userForm.password" /></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td><input type="email" ng-model="userForm.emailAddress" /></td>
+                </tr>
+                <tr>
+                    <td>Enabled</td>
+                    <td><input type="byte" ng-model="userForm.enabled" /></td>
+                </tr>
+                <tr>
+                    <td>Last Login</td>
+                    <td><input type="text" ng-model="userForm.lastLogin" /></td>
+                </tr>
+                <tr>
+                    <td>Account Id</td>
+                    <td><input type="text" ng-model="userForm.accountId" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" class="green-button" /></td>
+                </tr>
+            </table>
+    </form>
+    <table>
+        <tr>
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Password</th>
+            <th>Email Address</th>
+            <th>Enabled</th>
+            <th>Last Login</th>
+            <th>Account Id</th>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td>{{ user.userId }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.emailAddress }}</td>
+            <td>{{ user.enabled }}</td>
+            <td>{{ user.lastLogin }}</td>
+            <td>{{ user.accountId }}</td>
+            <td>
+                <a ng-click="editUser(user)" class="blue-button">Edit</a>
+                <a ng-click="deleteUser(user)" class="red-button">Delete</a>
+            </td>
+        </tr>
+    </table>
+    </body>
+</html>
